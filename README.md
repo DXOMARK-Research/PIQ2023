@@ -15,7 +15,7 @@ We present PIQ23, a portrait-specific image quality assessment dataset of 5116 i
 
  **Dataset Access**
  - The PIQ23 dataset can be download from the DXOMARK CORP [**website**](https://corp.dxomark.com/data-base-piq23/).
- - You need to fill the form and agree to the terms and conditions in order to request access to the dataset. We garantee open access to any individual or institution followING these instructions.
+ - You need to fill the form and agree to the terms and conditions in order to request access to the dataset. We garantee open access to any individual or institution following these instructions.
  - In a short time, your request will be validated and you will receive an automatic email with a temporary link in order to download the dataset.
  - DXOMARK collects your information for **tracking purposes** only, in order to reach out to you in case some images need to be removed from the dataset.
 
