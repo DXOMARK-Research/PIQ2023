@@ -52,6 +52,6 @@ The CSV files include the following entries:
 ## License
 
 ## About
-For any questions please contact: nchahine@dxomark.com
+For any questions please contact: piq2023@dxomark.com
 
 
