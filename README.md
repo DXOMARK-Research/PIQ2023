@@ -52,8 +52,20 @@ The CSV files include the following entries:
 - **CONDITION**: lighting condition (Outdoor, Indoor, Lowlight or Night)
 
 ## Citation
+Please cite the paper/dataset as follows:
+```bibtex
+@misc{chahine2023image,
+      title={An Image Quality Assessment Dataset for Portraits}, 
+      author={Nicolas Chahine and Ana-Stefania Calarasanu and Davide Garcia-Civiero and Theo Cayla and Sira Ferradans and Jean Ponce},
+      year={2023},
+      eprint={2304.05772},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 
+```
 ## License
+Provided that the User complies with the Terms of Use, the Provider grants a limited, non-exclusive, personal, non-transferable, non-sublicensable, and revocable license to access, download and use the Database for internal and research purposes only, during the specified term. The User is required to comply with the Provider's reasonable instructions, as well as all applicable statutes, laws, and regulations.
 
 ## About
 For any questions please contact: piq2023@dxomark.com
