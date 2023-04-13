@@ -1,5 +1,5 @@
 # PIQ23: An Image Quality Assessment Dataset for Portraits
-### This is the official repo for PIQ23, accepted in CVPR2023.
+This is the official repo for PIQ23, accepted in CVPR2023.
 
 <img src=Imgs/pdf.avif width='150'><br/>
 &emsp;&ensp; &emsp;&ensp;&ensp;[PDF](https://arxiv.org/abs/2304.05772)
