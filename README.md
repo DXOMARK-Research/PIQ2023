@@ -1,8 +1,8 @@
-# PIQ23: An Image quality Assessment Dataset for Portraits
+# PIQ23: An Image Quality Assessment Dataset for Portraits
+### This is the official repo for PIQ23, accepted in CVPR2023.
+
 <img src=Imgs/pdf.avif width='150'><br/>
 &emsp;&ensp; &emsp;&ensp;&ensp;[PDF](https://arxiv.org/abs/2304.05772)
-
-
 
 ## Introduction
 We present PIQ23, a portrait-specific image quality assessment dataset of 5116 images of predefined scenes acquired by more than 100 smartphones, covering a high variety of brands, models, and use cases. The dataset features individuals from a wide range of ages, genders, and ethnicities who have given explicit and informed consent for their photographs to be used in public research. It is annotated by pairwise comparisons (PWC) collected from over 30 image quality experts for three image attributes: face detail preservation, face target exposure, and overall image quality.
