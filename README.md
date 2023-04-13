@@ -18,10 +18,9 @@ We present PIQ23, a portrait-specific image quality assessment dataset of 5116 i
  - You agree to remove, throughout the life cycle of the dataset, any set of images following the request of the authors.
 
  **Dataset Access**
- - The PIQ23 dataset can be download from the DXOMARK CORP [**website**](https://corp.dxomark.com/data-base-piq23/).
- - You need to fill the form and agree to the terms and conditions in order to request access to the dataset. We garantee open access to any individual or institution followING these instructions.
+ - The PIQ23 dataset (5GB) can be download from the DXOMARK CORP [**website**](https://corp.dxomark.com/data-base-piq23/).
+ - You need to fill the form and agree to the terms and conditions in order to request access to the dataset. We garantee open access to any individual or institution following these instructions.
  - In a short time, your request will be validated and you will receive an automatic email with a temporary link in order to download the dataset.
- - DXOMARK collects your information for **tracking purposes** only, in order to reach out to you in case some images need to be removed from the dataset.
 
  **Overview**
 
@@ -45,6 +44,7 @@ The CSV files include the following entries:
 - **CI HIGH**: upper bound of image's confidence interval
 - **CI RANGE**: CI HIGH - CI LOW
 - **QUALITY LEVEL**: preliminary quality level (result of the clustering over CIs)
+- **CLUSTER**: final quality levels (result of the variance analysis and community detection)
 - **TOTAL COMPARISONS**: total number of comparisons for this image
 - **SCENE**: scene name
 - **ATTRIBUTE**: attribute (Exposure, Details or Overall)
@@ -56,6 +56,6 @@ The CSV files include the following entries:
 ## License
 
 ## About
-For any questions please contact: nchahine@dxomark.com
+For any questions please contact: piq2023@dxomark.com
 
 
