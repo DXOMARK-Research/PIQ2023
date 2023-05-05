@@ -18,7 +18,7 @@ We present PIQ23, a portrait-specific image quality assessment dataset of 5116 i
  - You agree to remove, throughout the life cycle of the dataset, any set of images following the request of the authors.
 
  **Dataset Access**
- - The PIQ23 dataset (5GB) can be download from the DXOMARK CORP [**website**](https://corp.dxomark.com/data-base-piq23/).
+ - The PIQ23 dataset (5GB) can be downloaded from the DXOMARK CORP [**website**](https://corp.dxomark.com/data-base-piq23/).
  - You need to fill the form and agree to the terms and conditions in order to request access to the dataset. We garantee open access to any individual or institution following these instructions.
  - In a short time, your request will be validated and you will receive an automatic email with a temporary link in order to download the dataset.
 
@@ -50,6 +50,29 @@ The CSV files include the following entries:
 - **ATTRIBUTE**: attribute (Exposure, Details or Overall)
 - **SCENE IDX**: scene index (from 0 to 49)
 - **CONDITION**: lighting condition (Outdoor, Indoor, Lowlight or Night)
+
+## Test Splits
+We provide two **official** test splits for PIQ23:
+- **Device split**:
+    - We split PIQ23 by devices, in order to test the general performance of the trained models on the given scenes.
+    - The test set contains around 30% of images from each scene, thus 30% of the whole dataset. 
+    - To avoid device bias, we have carefully selected devices from different quality levels and price ranges for the test set. This split can still include some images of the test devices in the training set and vice versa since the distribution of devices per scenes is not completely uniform. We can garantee that more than 90% of the training and testing devices do not overlap.
+    - We first sort the devices by their median percentage of images across scenes then split them into five groups from the most common device to the least and sample from these five groups until we get around 30% of the dataset.
+    - The device split csv can be found in "Test split\Device Split.csv".
+    - The test and train csv for the different attributes can be found here "Test split\Device Split\".
+- **Scene split**: 
+    - We split PIQ23 by scene in order to test the generalization power of the trained models.
+    - We have carefully chosen 15/50 scenes for the testing set, covering around 30% of the images from each condition, thus 30% of the whole dataset, around 1486/5116 images.
+    - To select the test set, we first sort the scenes by the percentage of images in the corresponding condition (Outdoor, Indoor, Lowlight, Night), we then select a group of scenes covering a variety of condition (framing, lighting, skin tones, etc.) until we get around 30% of images for each condition.
+    - The scene split csv can be found in "Test split\Scene Split.csv".
+    - The test and train csv for the different attributes can be found here "Test split\Scene Split\".
+    - Examples of the test and train scenes can be found in "Test split\Scene Split\Scene examples".
+
+An example of how to use the splits can be found in the "Test split example.ipynb" notebook. 
+
+***NB:*** 
+- Please ensure to publish results on both splits in your papers.
+- The paper's main results cannot be reproduced with these splits. We will be publishing official performances on these splits soon.
 
 ## Citation
 Please cite the paper/dataset as follows:
