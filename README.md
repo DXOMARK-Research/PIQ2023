@@ -77,13 +77,13 @@ An example of how to use the splits can be found in the "Test split example.ipyn
 ## Citation
 Please cite the paper/dataset as follows:
 ```bibtex
-@misc{chahine2023image,
-      title={An Image Quality Assessment Dataset for Portraits}, 
-      author={Nicolas Chahine and Ana-Stefania Calarasanu and Davide Garcia-Civiero and Theo Cayla and Sira Ferradans and Jean Ponce},
-      year={2023},
-      eprint={2304.05772},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{Chahine_2023_CVPR,
+    author    = {Chahine, Nicolas and Calarasanu, Stefania and Garcia-Civiero, Davide and Cayla, Th\'eo and Ferradans, Sira and Ponce, Jean},
+    title     = {An Image Quality Assessment Dataset for Portraits},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {9968-9978}
 }
 
 ```
