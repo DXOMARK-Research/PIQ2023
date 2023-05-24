@@ -1,7 +1,7 @@
 # PIQ23: An Image Quality Assessment Dataset for Portraits
 This is the official repo for PIQ23, accepted in CVPR2023.
 
-<img src=Imgs/CVRP%20Logo_2023%20Vancouvar_Color.png width='350'> &emsp;&emsp; <img src=Imgs/youtube.avif width='120'> &emsp;&emsp; <img src=Imgs/Poster.png width='105'><br/>
+<img src=Imgs/CVRP%20Logo_2023%20Vancouvar_Color.png width='350'> &emsp;&emsp; <img src=Imgs/youtube.avif width='120'> &emsp;&emsp; <img src=Imgs/poster.png width='105'><br/>
 &ensp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&ensp;[CVPR2023](https://openaccess.thecvf.com/content/CVPR2023/html/Chahine_An_Image_Quality_Assessment_Dataset_for_Portraits_CVPR_2023_paper.html)&ensp;&ensp; &ensp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&ensp;&ensp;&ensp; &emsp;&emsp;&emsp;&ensp;[Video](https://youtu.be/cvWjOWq5wnk)&ensp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Poster](Imgs/CVPR_Poster_PIQ23.png)
 
 ## Introduction
