@@ -78,13 +78,13 @@ An example of how to use the splits can be found in the "Test split example.ipyn
 - The paper's main results cannot be reproduced with these splits. We will be publishing official performances on these splits soon.
 
 ## Benchmarks
-||Device Split | | |
+|Device Split | | |
 |:----|:----|:----|:----|
 |Model\Attribute|Details|Exposure|Overall|
 |DBCNN (1200 x KONIQ)|0.787|0.807|0.83|
 |MUSIQ (1200 x SPAQ)|0.824|0.848|0.848|
 
-| |Scene Split             |          |          |
+| Scene Split          |         |          |          |
 |:----------------------|:---------|:----------|:----------|
 | Model\Attribute      | Details | Exposure | Overall  |
 | DBCNN (1200 x KONIQ) | 0.623   | 0.712    | 0.633    |
