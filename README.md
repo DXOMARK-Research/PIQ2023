@@ -81,14 +81,14 @@ An example of how to use the splits can be found in the "Test split example.ipyn
 |Device Split || | |
 |:----|:----|:----|:----|
 |Model\Attribute|Details|Exposure|Overall|
-|DBCNN (1200 x KONIQ)|0.787|0.807|0.83|
-|MUSIQ (1200 x SPAQ)|0.824|0.848|0.848|
+|DBCNN (1200 x LIVEC)|0.787|0.807|0.83|
+|MUSIQ (1200 x PAQ2PIQ)|0.824|0.848|0.848|
 
 | Scene Split          |         |          |          |
 |:----------------------|:---------|:----------|:----------|
 | Model\Attribute      | Details | Exposure | Overall  |
-| DBCNN (1200 x KONIQ) | 0.623   | 0.712    | 0.633    |
-| MUSIQ (1200 x SPAQ)  | 0.674   | 0.764    | 0.736    |
+| DBCNN (1200 x LIVEC) | 0.623   | 0.712    | 0.633    |
+| MUSIQ (1200 x PAQ2PIQ)  | 0.674   | 0.764    | 0.736    |
 
 ## Citation
 Please cite the paper/dataset as follows:
