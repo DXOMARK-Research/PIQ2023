@@ -78,7 +78,7 @@ An example of how to use the splits can be found in the "Test split example.ipyn
 - The paper's main results cannot be reproduced with these splits. We will be publishing official performances on these splits soon.
 
 ## Benchmarks
-|Device Split || | |
+<!-- |Device Split | | | |
 |:----|:----|:----|:----|
 |Model\Attribute|Details|Exposure|Overall|
 |DBCNN (1200 x LIVEC)|0.787|0.807|0.83|
@@ -90,7 +90,150 @@ An example of how to use the splits can be found in the "Test split example.ipyn
 | Model\Attribute      | Details | Exposure | Overall  |
 | DBCNN (1200 x LIVEC) | 0.623   | 0.712    | 0.633    |
 | MUSIQ (1200 x PAQ2PIQ)  | 0.674   | 0.764    | 0.736    |
-| HyperIQA (1344 (224*6) x No IQA pretraining)  | 0.701   | 0.692    | 0.74    |
+| HyperIQA (1344 (224*6) x No IQA pretraining)  | 0.701   | 0.692    | 0.74    | -->
+<table style="border-bottom:2px solid; border-left:2px solid; border-:2px solid">
+  <tr>
+    <th colspan="13">Device Split</th>
+  </tr>
+  <tr>
+    <th rowspan="2" style="text-align:center;border-right:2px solid">Model\Attribute</th>
+    <th colspan="4" style="text-align:center;border-right:2px solid">Details</th>
+    <th colspan="4" style="text-align:center;border-right:2px solid">Exposure</th>
+    <th colspan="4" style="text-align:center;border-right:2px solid">Overall</th>
+  </tr>
+  <tr>
+    <th>SROCC</th>
+    <th>PLCC</th>
+    <th>KROCC </th>
+    <th style="border-right:2px solid">MAE</th>
+    <th>SROCC</th>
+    <th>PLCC</th>
+    <th>KROCC </th>
+    <th style="border-right:2px solid">MAE</th>
+    <th>SROCC</th>
+    <th>PLCC</th>
+    <th>KROCC </th>
+    <th style="border-right:2px solid">MAE</th>
+  </tr>
+  <tr>
+    <td style="border-right:2px solid">DBCNN (1200 x LIVEC)</td>
+    <td>0.787</td>
+    <td>0.783</td>
+    <td>0.59</td>
+    <td style="border-right:2px solid">0.777</td>
+    <td>0.807</td>
+    <td>0.804</td>
+    <td>0.611</td>
+    <td style="border-right:2px solid">0.704</td>
+    <td>0.83</td>
+    <td>0.824</td>
+    <td>0.653</td>
+    <td style="border-right:2px solid">0.656</td>
+  </tr>
+  <tr>
+    <td style="border-right:2px solid">MUSIQ (1200 x PAQ2PIQ)</td>
+    <td>0.824</td>
+    <td>0.831</td>
+    <td>0.65</td>
+    <td style="border-right:2px solid">0.627</td>
+    <td>0.848</td>
+    <td>0.859</td>
+    <td>0.671</td>
+    <td style="border-right:2px solid">0.585</td>
+    <td>0.848</td>
+    <td>0.837</td>
+    <td>0.65</td>
+    <td style="border-right:2px solid">0.626</td>
+  </tr>
+  <tr>
+    <td style="border-right:2px solid">HyperIQA (1344 (224*6) x No IQA pretraining)</td>
+    <td>0.793</td>
+    <td>0.766</td>
+    <td>0.618</td>
+    <td style="border-right:2px solid">0.751</td>
+    <td >0.8</td>
+    <td>0.828</td>
+    <td>0.636</td>
+    <td style="border-right:2px solid">0.721</td>
+    <td>0.818</td>
+    <td>0.825</td>
+    <td>0.66</td>
+    <td style="border-right:2px solid">0.612</td>
+  </tr>
+</table>
+
+
+<table style="border-bottom:2px solid; border-left:2px solid; border-:2px solid">
+  <tr>
+    <th colspan="13">Scene Split</th>
+  </tr>
+  <tr>
+    <th rowspan="2" style="text-align:center;border-right:2px solid">Model\Attribute</th>
+    <th colspan="4" style="text-align:center;border-right:2px solid">Details</th>
+    <th colspan="4" style="text-align:center;border-right:2px solid">Exposure</th>
+    <th colspan="4" style="text-align:center;border-right:2px solid">Overall</th>
+  </tr>
+  <tr>
+    <th>SROCC</th>
+    <th>PLCC</th>
+    <th>KROCC </th>
+    <th style="border-right:2px solid">MAE</th>
+    <th>SROCC</th>
+    <th>PLCC</th>
+    <th>KROCC </th>
+    <th style="border-right:2px solid">MAE</th>
+    <th>SROCC</th>
+    <th>PLCC</th>
+    <th>KROCC </th>
+    <th style="border-right:2px solid">MAE</th>
+  </tr>
+  <tr>
+    <td style="border-right:2px solid">DBCNN (1200 x LIVEC)</td>
+    <td>0.623</td>
+    <td>0.55</td>
+    <td>0.449</td>
+    <td style="border-right:2px solid">0.916</td>
+    <td>0.712</td>
+    <td>0.741</td>
+    <td>0.528</td>
+    <td style="border-right:2px solid">0.863</td>
+    <td>0.633</td>
+    <td>0.621</td>
+    <td>0.446</td>
+    <td style="border-right:2px solid">1.173</td>
+  </tr>
+  <tr>
+    <td style="border-right:2px solid">MUSIQ (1200 x PAQ2PIQ)</td>
+    <td>0.674</td>
+    <td>0.671</td>
+    <td>0.487</td>
+    <td style="border-right:2px solid">0.972</td>
+    <td>0.764</td>
+    <td>0.772</td>
+    <td>0.569</td>
+    <td style="border-right:2px solid">0.87</td>
+    <td>0.736</td>
+    <td>0.759 </td>
+    <td>0.549 </td>
+    <td style="border-right:2px solid">0.956 </td>
+  </tr>
+  <tr>
+    <td style="border-right:2px solid">HyperIQA (1344 (224*6) x No IQA pretraining)</td>
+    <td>0.701</td>
+    <td>0.668</td>
+    <td>0.504</td>
+    <td style="border-right:2px solid">0.936</td>
+    <td>0.692</td>
+    <td>0.684</td>
+    <td>0.498</td>
+    <td style="border-right:2px solid">0.863</td>
+    <td>0.74</td>
+    <td>0.736</td>
+    <td>0.55</td>
+    <td style="border-right:2px solid">0.989</td>
+  </tr>
+</table>
+
 
 
 ## Citation
