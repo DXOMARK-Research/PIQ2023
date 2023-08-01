@@ -83,12 +83,15 @@ An example of how to use the splits can be found in the "Test split example.ipyn
 |Model\Attribute|Details|Exposure|Overall|
 |DBCNN (1200 x LIVEC)|0.787|0.807|0.83|
 |MUSIQ (1200 x PAQ2PIQ)|0.824|0.848|0.848|
+|HyperIQA (1344 (224*6) x No IQA pretraining)  | 0.793   | 0.8    | 0.818    |
 
 | Scene Split          |         |          |          |
 |:----------------------|:---------|:----------|:----------|
 | Model\Attribute      | Details | Exposure | Overall  |
 | DBCNN (1200 x LIVEC) | 0.623   | 0.712    | 0.633    |
 | MUSIQ (1200 x PAQ2PIQ)  | 0.674   | 0.764    | 0.736    |
+| HyperIQA (1344 (224*6) x No IQA pretraining)  | 0.701   | 0.692    | 0.74    |
+
 
 ## Citation
 Please cite the paper/dataset as follows:
