@@ -80,9 +80,9 @@ An example of how to use the splits can be found in the "Test split example.ipyn
 ## Benchmarks
 
 **Note on the results**:
-- The models chosen as *optimal* in this experience are the once who scored a maximum SROCC on the testing sets. Please take into consideration that a maximum SROCC does not reflect a maximum in other parameters. 
+- The models chosen as *optimal* in this experience are the ones who scored a maximum SROCC on the testing sets. Please take into consideration that a maximum SROCC does not reflect a maximum in other parameters. 
 - Other experiences where the optimal model is chosen based on a combination of metrics would be optimal.
-- There should be a margin of error taken into account in these metrics. A difference of certain % in correlation can be due to different factors and might not be repeatable.
+- There should be a margin of error taken into account in these metrics. A difference of certain percentage in correlation can be due to multiple factors and might not be repeatable.
 
 <table>
   <tr>
@@ -134,8 +134,8 @@ An example of how to use the splits can be found in the "Test split example.ipyn
     <td><b>0.671</b></td>
     <td><b>0.585</b></td>
     <td><b>0.848</b></td>
-    <td><b>0.837</b></td>
-    <td><b>0.65</b></td>
+    <td>0.837</td>
+    <td>0.65</td>
     <td>0.626</td>
   </tr>
   <tr>
@@ -163,10 +163,10 @@ An example of how to use the splits can be found in the "Test split example.ipyn
     <td>tbd</td>
     <td>tbd</td>
     <td>tbd</td>
-    <td>tbd</td>
-    <td>tbd</td>
-    <td>tbd</td>
-    <td><b>tbd</b></td>
+    <td>0.845</td>
+    <td><b>0.856</b></td>
+    <td><b>0.674</b></td>
+    <td>0.641</td>
   </tr>
 </table>
 
@@ -256,7 +256,7 @@ Please cite the paper/dataset as follows:
 
 ```
 ## License
-Provided that the User complies with the Terms of Use, the Provider grants a limited, non-exclusive, personal, non-transferable, non-sublicensable, and revocable license to access, download and use the Database for internal and research purposes only, during the specified term. The User is required to comply with the Provider's reasonable instructions, as well as all applicable statutes, laws, and regulations.
+Provided that the user complies with the Terms of Use, the provider grants a limited, non-exclusive, personal, non-transferable, non-sublicensable, and revocable license to access, download and use the Database for internal and research purposes only, during the specified term. The User is required to comply with the Provider's reasonable instructions, as well as all applicable statutes, laws, and regulations.
 
 ## About
 For any questions please contact: piq2023@dxomark.com
