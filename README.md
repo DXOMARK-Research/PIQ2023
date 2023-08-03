@@ -274,6 +274,11 @@ An example of how to use the splits can be found in the "Test split example.ipyn
   </tr>
 </table>
 
+## TO DO
+- Add SemHyperIQA Code
+- Add Stat analysis code
+- Add other benchmarks code
+- Add pretrained weights
 
 ## Citation
 Please cite the paper/dataset as follows:
