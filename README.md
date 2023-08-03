@@ -131,7 +131,7 @@ An example of how to use the splits can be found in the "Test split example.ipyn
     <td>0.824</td>
     <td>0.831</td>
     <td>0.65</td>
-    <td><b>0.627</b></td>
+    <td>0.627</td>
     <td><b>0.848</b></td>
     <td><b>0.859</b></td>
     <td><b>0.671</b></td>
@@ -158,18 +158,48 @@ An example of how to use the splits can be found in the "Test split example.ipyn
   </tr>
   <tr>
     <td>SEM-HyperIQA (1344 (224*6) x No IQA pretraining)</td>
-    <td><b>0.854</b></td>
-    <td><b>0.847</b></td>
-    <td><b>0.676</b></td>
+    <td>0.854</td>
+    <td>0.847</td>
+    <td>0.676</td>
     <td>0.645</td>
-    <td>tbd</td>
-    <td>tbd</td>
-    <td>tbd</td>
-    <td>tbd</td>
+    <td>0.826</td>
+    <td>0.858</td>
+    <td>0.65</td>
+    <td>0.635</td>
     <td>0.845</td>
     <td><b>0.856</b></td>
     <td><b>0.674</b></td>
     <td>0.641</td>
+  </tr>
+  <tr>
+    <td>SEM-HyperIQA-CO (1344 (224*6) x No IQA pretraining)</td>
+    <td>0.829</td>
+    <td>0.821</td>
+    <td>0.641</td>
+    <td>0.697</td>
+    <td>0.816</td>
+    <td>0.843</td>
+    <td>0.633</td>
+    <td>0.668</td>
+    <td>0.829</td>
+    <td>0.843</td>
+    <td>0.64</td>
+    <td>0.624</td>
+  </tr>
+  <td>SEM-HyperIQA-SO (1344 (224*6) x No IQA pretraining)</td>
+    <td><b>0.874</b></td>
+    <td><b>0.871</b></td>
+    <td><b>0.709</b></td>
+    <td><b>0.583</b></td>
+    <td>0.826</td>
+    <td>0.846</td>
+    <td>0.651</td>
+    <td>0.678</td>
+    <td>0.84</td>
+    <td>0.849</td>
+    <td>0.661</td>
+    <td>0.639</td>
+  <tr>
   </tr>
 </table>
 
