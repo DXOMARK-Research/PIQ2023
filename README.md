@@ -245,7 +245,7 @@ An example of how to use the splits can be found in the "Test split example.ipyn
   <tr>
     <td>MUSIQ (1200 x PAQ2PIQ)</td>
     <td>0.674</td>
-    <td><b>0.671</b></td>
+    <td>0.671</td>
     <td>0.487</td>
     <td>0.972</td>
     <td><b>0.764</b></td>
@@ -274,10 +274,10 @@ An example of how to use the splits can be found in the "Test split example.ipyn
   </tr>
   <tr>
     <td>SEM-HyperIQA (1344 (224*6) x No IQA pretraining)</td>
-    <td><b>0.732</b></td>
+    <td>0.732</td>
     <td>0.649</td>
-    <td><b>0.547</b></td>
-    <td><b>0.879</b></td>
+    <td>0.547</td>
+    <td>0.879</td>
     <td>0.716</td>
     <td>0.697</td>
     <td>0.53</td>
@@ -286,6 +286,21 @@ An example of how to use the splits can be found in the "Test split example.ipyn
     <td>0.752</td>
     <td><b>0.558</b></td>
     <td>1.033</td>
+  </tr>
+    <tr>
+    <td>SEM-HyperIQA-CO (1344 (224*6) x No IQA pretraining)</td>
+    <td><b>0.746</b></td>
+    <td><b>0.714</b></td>
+    <td><b>0.549</b></td>
+    <td><b>0.849</b></td>
+    <td>0.698</td>
+    <td>0.698</td>
+    <td>0.517</td>
+    <td>0.945</td>
+    <td>0.739</td>
+    <td>0.736</td>
+    <td>0.55</td>
+    <td>1.038</td>
   </tr>
 </table>
 
