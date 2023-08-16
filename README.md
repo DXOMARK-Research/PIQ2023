@@ -80,10 +80,10 @@ An example of how to use the splits can be found in the "Test split example.ipyn
 ## Benchmarks
 
 **Note on the experiments**:
-- The models chosen as *optimal* in this experience are the ones who scored a maximum SROCC on the testing sets. Please take into consideration that a maximum SROCC does not reflect a maximum in other parameters. 
-- Other experiences where the optimal model is chosen based on a combination of metrics would be optimal.
-- There should be a margin of error taken into account in these metrics. A difference of certain percentage in correlation can be due to multiple factors and might not be repeatable.
-- The base resolution for the models is 1200; however, for HyperIQA variants, we needed to redefine the architecture of the model since it only accepts 224x224 inputs, and the new architecture accepts resolutions that are a multiple of 224.
+- The models chosen as *optimal* in this experience are the ones who scored a **maximum SROCC** on the testing sets. Please take into consideration that a maximum SROCC does not reflect a maximum in other metrics. 
+- An optimal approach would be to choose the optimal model based on a combination of metrics.
+- There should be a margin of error taken into account for these metrics. A difference of a minimal percentage in correlation can be due to multiple factors and might not be repeatable.
+- The base resolution for the models is 1200; however, for HyperIQA variants, we needed to redefine the architecture of the model since it only accepts 224x224 inputs, and the new architecture accepts resolutions that are a multiple of 224, 1344 in our case.
 - for HyperIQA variants, only the Resnet50 backbone is pretrained on ImageNet. There was no IQA pretraining.
 
 
