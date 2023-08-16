@@ -46,7 +46,6 @@ class SemHyperIQA(nn.Module):
         
         if hyperNetPretrained is not None:
             load_pretrained_network(self.hyperNet, defaultHyperNetWeights.get(hyperNetPretrained, hyperNetPretrained))
-            # self.model_hyper.load_state_dict(hyperNetPretrainedPath)
         if pretrained is not None:
             load_pretrained_network(self, defaultWeights.get(pretrained, pretrained))
         
@@ -101,11 +100,9 @@ class SemHyperIQA(nn.Module):
             if not self.classFeedback and index is not None:
                 index_ = one_hot(index, num_classes=self.rescale['featureInSize']).to(torch.float32)
                 scoreWeights = self.rescaleNet(index_)
-                # predScene, _ = self.sceneClassNet(hnFeatures)
             elif hasattr(self, 'sceneClassNet') and isinstance(output, tuple):
                 scoreWeights = self.rescaleNet(predScene.softmax(dim=1))
             else:
-                # This should never be raised since 
                 raise ValueError("Class feedback needs class prediction, which is not defined in this configuration")
 
             # FIXME: Fit with any polynomial degree instead of only manual linear fit.

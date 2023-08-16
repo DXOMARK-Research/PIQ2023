@@ -82,13 +82,13 @@ class HyperNet(nn.Module):
 
     def _forward(self, imgTensorIn):
         feature_size = self.feature_size
-        res_out = self.res(imgTensorIn)  # img shape = torch.Size([batch_size, 3, patch_size, patch_size])
+        res_out = self.res(imgTensorIn)
             
         # input vector for target net
         target_in_vec = res_out['target_in_vec'].view(-1, self.target_in_size, 1, 1)
 
         # input features for hyper net
-        hyper_in_feat = self.conv1(res_out['hyper_in_feat']).view(-1, self.hyperInChn, feature_size, feature_size)  # hyper_in_feat shape = torch.Size([4, 336, 21, 21])
+        hyper_in_feat = self.conv1(res_out['hyper_in_feat']).view(-1, self.hyperInChn, feature_size, feature_size)
         
         # generating target net weights & biases
         target_fc1w = self.fc1w_conv(hyper_in_feat).view(-1, self.f1, self.target_in_size, 1, 1)
@@ -139,7 +139,7 @@ class HyperNet(nn.Module):
                 else:
                     out_all.append(out)
             if self.poolClass:
-                return out_all, hyper_in_all  # hyper_in_feat output with shape = [batch_size, patch_size/2, 21, 21]
+                return out_all, hyper_in_all
             return out_all
         
         return self._forward(input)
