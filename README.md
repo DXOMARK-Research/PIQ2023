@@ -4,8 +4,10 @@
 
 This is the official repo for PIQ23, accepted in CVPR2023.
 
-<img src=Imgs/CVRP%20Logo_2023%20Vancouvar_Color.png width='350'> &emsp;&emsp; <img src=Imgs/youtube.avif width='120'> &emsp;&emsp; <img src=Imgs/poster.png width='105'><br/>
-&ensp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&ensp;&ensp;[CVPR2023](https://openaccess.thecvf.com/content/CVPR2023/html/Chahine_An_Image_Quality_Assessment_Dataset_for_Portraits_CVPR_2023_paper.html)&ensp;&ensp; &ensp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;[Video](https://youtu.be/cvWjOWq5wnk)&ensp; &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;[Poster](Imgs/CVPR_Poster_PIQ23.png)
+<img src=Imgs/download.png width = '100'>  &emsp;&emsp;<img src=Imgs/CVRP%20Logo_2023%20Vancouvar_Color.png width='250'> &emsp;&emsp; <img src=Imgs/youtube.avif width='120'> &emsp;&emsp; <img src=Imgs/poster.png width='105'><br/>
+
+&ensp;&ensp; &emsp;[PIQ23](https://corp.dxomark.com/data-base-piq23/)
+&ensp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&ensp;&ensp;[CVPR2023](https://openaccess.thecvf.com/content/CVPR2023/html/Chahine_An_Image_Quality_Assessment_Dataset_for_Portraits_CVPR_2023_paper.html)&ensp;&ensp; &ensp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;[Video](https://youtu.be/cvWjOWq5wnk)&ensp; &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;[Poster](Imgs/CVPR_Poster_PIQ23.png)
 
 ## Introduction
 We present PIQ23, a portrait-specific image quality assessment dataset of 5116 images of predefined scenes acquired by more than 100 smartphones, covering a high variety of brands, models, and use cases. The dataset features individuals from a wide range of ages, genders, and ethnicities who have given explicit and informed consent for their photographs to be used in public research. It is annotated by pairwise comparisons (PWC) collected from over 30 image quality experts for three image attributes: face detail preservation, face target exposure, and overall image quality.
