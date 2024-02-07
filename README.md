@@ -85,6 +85,7 @@ An example of how to use the splits can be found in the "Test split example.ipyn
 ## Benchmarks
 
 **Note on the experiments**:
+- The reported results represent the **median of the metrics across all scenes**. Please note, that the median was used to account for outlier scenes, in case they exist.
 - The models chosen as *optimal* in this experience are the ones who scored a **maximum SROCC** on the testing sets. Please take into consideration that a maximum SROCC does not reflect a maximum in other metrics. 
 - An optimal approach would be to choose the optimal model based on a combination of metrics.
 - There should be a margin of error taken into account for these metrics. A difference of a minimal percentage in correlation can be due to multiple factors and might not be repeatable.
