@@ -8,7 +8,7 @@ This is the official repo for PIQ23, accepted in CVPR2023.
 <br/>
 
 &ensp; &emsp;[PIQ23](https://corp.dxomark.com/data-base-piq23/)
-&ensp;&emsp;&emsp; &emsp;&emsp;&emsp; &ensp;&ensp;[CVPR2023](https://openaccess.thecvf.com/content/CVPR2023/html/Chahine_An_Image_Quality_Assessment_Dataset_for_Portraits_CVPR_2023_paper.html)&ensp; &ensp;&emsp; &emsp;&emsp; &emsp;&emsp;&ensp;&ensp;&ensp;&ensp;
+&ensp;&emsp;&emsp; &emsp;&emsp;&emsp; &ensp;&ensp;[CVPR2023](https://openaccess.thecvf.com/content/CVPR2023/html/Chahine_An_Image_Quality_Assessment_Dataset_for_Portraits_CVPR_2023_paper.html) [/ FHIQA](https://arxiv.org/abs/2402.09178)&ensp; &ensp;&emsp; &emsp;&emsp; &emsp;&emsp;&ensp;&ensp;&ensp;&ensp;
 [NTIRE](https://codalab.lisn.upsaclay.fr/competitions/17311#learn_the_details)&ensp; &emsp;&emsp;&emsp;&emsp;&emsp;
 [Video](https://youtu.be/cvWjOWq5wnk)&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;[Poster](Imgs/CVPR_Poster_PIQ23.png)
 
@@ -235,33 +235,34 @@ An example of how to use the splits can be found in the "Test split example.ipyn
   </tr>
   <tr>
     <td>DBCNN (1200 x LIVEC)</td>
-    <td>0.623</td>
-    <td>0.55</td>
-    <td>0.449</td>
-    <td>0.916</td>
-    <td>0.712</td>
-    <td>0.741</td>
-    <td>0.528</td>
-    <td><b>0.863</b></td>
-    <td>0.633</td>
-    <td>0.621</td>
-    <td>0.446</td>
-    <td>1.173</td>
+    <td>0.59</td>
+    <td>0.51</td>
+    <td>0.45</td>
+    <td>0.99</td>
+    <td>0.69</td>
+    <td>0.69</td>
+    <td>0.51</td>
+    <td>0.91</td>
+    <td>0.59</td>
+    <td>0.64</td>
+    <td>0.43</td>
+    <td>1.04</td>
+    
   </tr>
   <tr>
     <td>MUSIQ (1200 x PAQ2PIQ)</td>
-    <td>0.674</td>
-    <td>0.671</td>
-    <td>0.487</td>
-    <td>0.972</td>
-    <td><b>0.764</b></td>
+    <td>0.72</td>
+    <td><b>0.77</b></td>
+    <td>0.53</td>
+    <td>0.90</td>
+    <td><b>0.79</b></td>
     <td><b>0.772</b></td>
-    <td><b>0.569</b></td>
+    <td><b>0.59</b></td>
     <td>0.87</td>
     <td>0.736</td>
-    <td><b>0.759</b></td>
-    <td>0.549</td>
-    <td><b>0.956</b></td>
+    <td>0.74</td>
+    <td>0.54</td>
+    <td><b>0.95</b></td>
   </tr>
   <tr>
     <td>HyperIQA (1344 (224*6) x No IQA pretraining)</td>
@@ -272,7 +273,7 @@ An example of how to use the splits can be found in the "Test split example.ipyn
     <td>0.692</td>
     <td>0.684</td>
     <td>0.498</td>
-    <td><b>0.863</b></td>
+    <td>0.863</td>
     <td>0.74</td>
     <td>0.736</td>
     <td>0.55</td>
@@ -282,23 +283,23 @@ An example of how to use the splits can be found in the "Test split example.ipyn
     <td>SEM-HyperIQA (1344 (224*6) x No IQA pretraining)</td>
     <td>0.732</td>
     <td>0.649</td>
-    <td>0.547</td>
+    <td><b>0.547</b></td>
     <td>0.879</td>
     <td>0.716</td>
     <td>0.697</td>
     <td>0.53</td>
     <td>0.967</td>
-    <td><b>0.749</b></td>
+    <td>0.749</td>
     <td>0.752</td>
-    <td><b>0.558</b></td>
+    <td>0.558</td>
     <td>1.033</td>
   </tr>
-    <tr>
+  <tr>
     <td>SEM-HyperIQA-CO (1344 (224*6) x No IQA pretraining)</td>
     <td><b>0.746</b></td>
-    <td><b>0.714</b></td>
+    <td>0.714</td>
     <td><b>0.549</b></td>
-    <td><b>0.849</b></td>
+    <td>0.849</td>
     <td>0.698</td>
     <td>0.698</td>
     <td>0.517</td>
@@ -307,6 +308,21 @@ An example of how to use the splits can be found in the "Test split example.ipyn
     <td>0.736</td>
     <td>0.55</td>
     <td>1.038</td>
+  </tr>
+   <tr>
+    <td>FULL-HyperIQA (1344 (224*6) x No IQA pretraining)</td>
+    <td>0.74</td>
+    <td>0.72</td>
+    <td><b>0.55</b></td>
+    <td><b>0.8</b></td>
+    <td>0.76</td>
+    <td>0.71</td>
+    <td>0.57</td>
+    <td><b>0.85</b></td>
+    <td><b>0.78</b></td>
+    <td><b>0.78</b></td>
+    <td><b>0.59</b></td>
+    <td>1.12</td>
   </tr>
 </table>
 

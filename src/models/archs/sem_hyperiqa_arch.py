@@ -30,6 +30,7 @@ class SemHyperIQA(nn.Module):
         self.nbPatchesIn = None
         self.classKey = kwargs.get('classKey', 'class')
         self.qualityKey = kwargs.get('qualityKey', 'quality')
+        self.preQualityKey = kwargs.get('preQualityKey', 'preQuality')
         if self.classify is not None:
             self.classFeaturesOut = self.classify.get('numClasses', None)
             self.nbPatchesIn = self.classify.get('nbPatchesIn', 1) # Assume one patch if we do not want to concatenate patches
@@ -91,30 +92,36 @@ class SemHyperIQA(nn.Module):
         predictionsQuality = modelTarget(inputTargetNet)
 
         predScene = None
+        outputDict = {}
 
         if hasattr(self, 'sceneClassNet') and isinstance(output, tuple):
             predScene = self.sceneClassNet(hnFeatures)
             predictionsQuality = predictionsQuality.reshape(self.nbPatchesIn, -1).mean(dim=0)
 
+        outputDict[self.qualityKey] = predictionsQuality
+
         if hasattr(self, 'rescaleNet') and hasattr(self, 'classFeedback'):
+            outputDict[self.preQualityKey] = predictionsQuality
+
             if not self.classFeedback and index is not None:
                 index_ = one_hot(index, num_classes=self.rescale['featureInSize']).to(torch.float32)
                 scoreWeights = self.rescaleNet(index_)
+            
             elif hasattr(self, 'sceneClassNet') and isinstance(output, tuple):
                 scoreWeights = self.rescaleNet(predScene.softmax(dim=1))
+            
             else:
                 raise ValueError("Class feedback needs class prediction, which is not defined in this configuration")
 
             # FIXME: Fit with any polynomial degree instead of only manual linear fit.
             # Re-scale the score prediction with alpha/beta
-            predictionsQuality = scoreWeights[:,0] * predictionsQuality + scoreWeights[:,1]
+            outputDict[self.qualityKey] = scoreWeights[:,0] * predictionsQuality + scoreWeights[:,1]
         
         if predScene is not None:
-            # FIXME: In case of rescaling return the quality before rescaling too
-            return {self.qualityKey: predictionsQuality.unsqueeze(1),
-                    self.classKey: predScene}
+            return {self.classKey: predScene,
+                    **{keyOut: valueOut.unsqueeze(1) for keyOut, valueOut in outputDict.items()}}
 
-        return predictionsQuality
+        return outputDict
     
     @staticmethod    
     def _consolidate_patches(hnFeatures, patches_per_image):
@@ -146,3 +153,83 @@ class SemHyperIQA(nn.Module):
         stacked_dict = {key: torch.stack([d[key] for d in dict_list], dim=0) for key in dict_list[0].keys()}
 
         return stacked_dict
+    
+class FullHyperIQA(SemHyperIQA):
+    def __init__(self, patchSize, hyperNetPretrained=None, pretrained=None, classify=None, rescale=None, **kwargs):
+        super().__init__(patchSize, hyperNetPretrained, pretrained, classify, rescale, **kwargs)
+        self.weightQualityByClass = kwargs.get('weightQualityByClass', 0)
+
+    def forward(self, x, index=None, *args):
+        if self.weightQualityByClass <= 0:
+            return super().forward(x, index, *args)
+        
+        # Generate weights for target network
+        output = self.hyperNet(x)
+
+        # Check if hyperNet returns hnFeatures
+        if isinstance(output, tuple):
+            paras, hnFeatures = output
+            hnFeatures = self._consolidate_patches(hnFeatures, self.nbPatchesIn)
+        else:
+            paras = output
+
+        if isinstance(paras, list):
+            paras = self._stack_dicts(paras)
+
+        # Building target network
+        modelTarget = TargetNet(paras)
+        for param in modelTarget.parameters():
+            param.requires_grad = False
+            
+        # Quality score prediction
+        inputTargetNet = paras['target_in_vec']
+        predictionsQuality = modelTarget(inputTargetNet)
+        
+        predScene = None
+        outputDict = {}
+
+        if hasattr(self, 'sceneClassNet') and isinstance(output, tuple):
+            predScene = self.sceneClassNet(hnFeatures)
+            predictionsQuality = predictionsQuality.reshape(self.nbPatchesIn, -1).mean(dim=0)
+        
+        outputDict[self.qualityKey] = predictionsQuality
+
+        if hasattr(self, 'rescaleNet') and hasattr(self, 'classFeedback'):
+            
+            outputDict[self.preQualityKey] = predictionsQuality
+            
+            if not self.classFeedback and index is not None:
+                index_ = one_hot(index, num_classes=self.rescale['featureInSize']).to(torch.float32)
+                scoreWeights = self.rescaleNet(index_)
+                # FIXME: Fit with any polynomial degree instead of only manual linear fit.
+                # Re-scale the score prediction with alpha/beta
+                outputDict[self.qualityKey] = scoreWeights[:,0] * predictionsQuality + scoreWeights[:,1]
+            
+            elif hasattr(self, 'sceneClassNet') and isinstance(output, tuple):
+                # Extracting top-k class probabilities and indices
+                topk_probs, topk_indices = torch.topk(predScene.softmax(dim=1), self.weightQualityByClass, dim=1)
+
+                # Normalizing the top-k probabilities
+                topk_probs /= topk_probs.sum(dim=1, keepdim=True)
+
+                # Rescale quality prediction for each of the top-k classes separately
+                weighted_rescaled_qualities = []
+                for k in range(self.weightQualityByClass):
+                    one_hot_class = one_hot(topk_indices[:, k], num_classes=self.rescale['featureInSize']).to(torch.float32)
+                    scoreWeights_for_class = self.rescaleNet(one_hot_class)
+                    rescaled_quality = scoreWeights_for_class[:, 0] * predictionsQuality + scoreWeights_for_class[:, 1]
+                    weighted_rescaled_qualities.append(rescaled_quality)
+
+                # Weighted aggregation of the rescaled qualities
+                weighted_rescaled_qualities = torch.stack(weighted_rescaled_qualities, dim=1)
+                outputDict[self.qualityKey] = (weighted_rescaled_qualities * topk_probs).sum(dim=-1)
+            
+            else:
+                # This should never be raised since 
+                raise ValueError("Class feedback needs class prediction, which is not defined in this configuration")           
+        
+        if predScene is not None:
+            return {self.classKey: predScene,
+                    **{keyOut: valueOut.unsqueeze(1) for keyOut, valueOut in outputDict.items()}}
+
+        return outputDict
