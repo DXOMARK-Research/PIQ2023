@@ -8,8 +8,8 @@ This is the official repo for PIQ23, accepted in CVPR2023.
 <br/>
 
 &ensp; &emsp;[PIQ23](https://corp.dxomark.com/data-base-piq23/)
-&ensp;&emsp;&emsp; &emsp;&emsp;&emsp; &ensp;&ensp;[CVPR2023](https://openaccess.thecvf.com/content/CVPR2023/html/Chahine_An_Image_Quality_Assessment_Dataset_for_Portraits_CVPR_2023_paper.html) [/ FHIQA](https://arxiv.org/abs/2402.09178)&ensp;&emsp; &emsp;&emsp; &emsp;
-[NTIRE](https://codalab.lisn.upsaclay.fr/competitions/17311#learn_the_details)&ensp; &emsp;&emsp;&emsp;&emsp;&emsp;
+&ensp;&emsp;&emsp; &emsp;&emsp;&emsp; &ensp;[CVPR2023](https://openaccess.thecvf.com/content/CVPR2023/html/Chahine_An_Image_Quality_Assessment_Dataset_for_Portraits_CVPR_2023_paper.html) [/ FHIQA](https://arxiv.org/abs/2402.09178)&ensp;&emsp; &emsp;&emsp; &emsp;
+[NTIRE24](https://codalab.lisn.upsaclay.fr/competitions/17311#learn_the_details)&ensp; &emsp;&emsp;&emsp;&emsp;&emsp;
 [Video](https://youtu.be/cvWjOWq5wnk)&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;[Poster](Imgs/CVPR_Poster_PIQ23.png)
 
 ## Introduction
